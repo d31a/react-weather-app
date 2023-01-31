@@ -14,7 +14,8 @@ export default function App() {
   // process.env.REACT_APP_API_KEY gets API Key from the .env file
   // Why ? This keeps the key secure !
 
-  useEffect(() => {
+useEffect(() => 
+{
     const fetchData = async () => {
       navigator.geolocation.getCurrentPosition(function(position) { // pulls current position
         setLat(position.coords.latitude); // setting the lat into the state
@@ -29,8 +30,17 @@ export default function App() {
       });
     }
     fetchData();
-  }, [lat,long])
+
   
+  // refresh API call
+  const intervalId = setInterval(() => {
+    fetchData();
+  }, 60000); // refresh every 60 seconds
+
+  return () => clearInterval(intervalId);
+}, [lat, long]);
+
+
 
   // mandatory check to make sure in case of undefined data, an empty div is returned -- due to async
   // async shows the return statement prior to the data being pulled from the API 
