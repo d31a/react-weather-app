@@ -8,11 +8,13 @@ div {
 }
 
 .card {
-    background-color:whitesmoke;
+    background-color:lightgrey;
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
 }
+
+
+
 
 .refresh {
    float:right;
@@ -40,16 +42,43 @@ div {
 
 #country {
     font-size: 15px;
-    background-color: lightgrey;
+    background-color: darkgrey;
     padding: 3px;
     border-radius: 5px;
     vertical-align: center;
 }
 
-#temp {
+.temp {
     
     font-size: 5em;
     font-weight: bold;
     margin:0px;
-    color: #222;
+}
+
+.low {
+    font-size: 5em;
+    font-weight: bold;
+    margin:0px;
+    color: rgb(94, 161, 202);
+}
+
+.mid {
+    font-size: 5em;
+    font-weight: bold;
+    margin:0px;
+    color: rgb(108, 158, 108);
+}
+
+.warm {
+    font-size: 5em;
+    font-weight: bold;
+    margin:0px;
+    color: rgb(218, 172, 87);
+}
+
+.hot {
+    font-size: 5em;
+    font-weight: bold;
+    margin:0px;
+    color: rgb(219, 90, 90);
 }

@@ -11,10 +11,13 @@ import './styles.css'
       const iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@4x.png";
       // rounds value of temp to nearest int 
       const temp = Math.round(weatherData.main.temp);
-      // add refresh button 
+      // testing for different colors according to weather temp 
+      const tempColour = temp < 4 ? "low" : temp < 15 ? "mid" : temp > 30 ? "hot" : temp > 20 ? "warm" : "temp";
+    
+      /* add refresh button 
       const refresh = () => {
         window.location.reload();
-      }
+      } */
 
       return (
         <div>
@@ -24,7 +27,7 @@ import './styles.css'
               </div>
                 <div className="content">
                 <img id="wicon" src={iconurl} alt="" />
-                <p id="temp">{temp}&deg;c</p>   
+                  <p className={tempColour}>{temp}&deg;c</p> 
                 <p id="current">Currently {weatherData.weather[0].main} outside</p>
               </div>
           </div>
