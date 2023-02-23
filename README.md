@@ -90,6 +90,6 @@ Make sure the `.env` file is is your `root` project folder `/weather-api` or it 
 
 ## Credits
 
-This app was created with help from here:
+With thanks to FreeCodeCamp for their instructions on how to import an API into React.
 
 https://www.freecodecamp.org/news/learn-react-by-building-a-weather-app/
