@@ -4,6 +4,9 @@ import './App.css';
 import React, { useEffect, useState } from "react";
 import Weather from './components/Weather';
 export default function App() {
+
+
+
   // creating state for holding the state of the lat / long 
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
@@ -38,22 +41,26 @@ useEffect(() =>
   }, 60000); // refresh every 60 seconds
 
   return () => clearInterval(intervalId);
-}, [lat, long]); console.log("API Refreshed!");
+}, [lat, long]);
 
-
+// changes the background color of the page depending on the temp
+  useEffect(() => {
+      // round the temperature to the nearest integer
+    const temp = Math.round(data.main?.temp);
+       // determine the class name based on the temperature range
+    const tempColour = temp < 4 ? "low" : temp < 15 ? "mid" : temp > 30 ? "hot" : temp > 20 ? "warm" : "temp";
+    // set the class of the body tag to change the background color based on the temperature
+    document.body.className = tempColour;
+  }, [data]);
 
   // mandatory check to make sure in case of undefined data, an empty div is returned -- due to async
   // async shows the return statement prior to the data being pulled from the API 
     return (
+    
       <div className="App">
-        {(typeof data.main != 'undefined') ? (
-          // Weather props being passed to main App.js
-          <Weather weatherData={data}/>
-        ): (
-          <div></div>
-        )}
-        
+          {data.main && <Weather weatherData={data} />}
       </div>
+     
   );
 }
 

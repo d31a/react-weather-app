@@ -8,9 +8,16 @@ div {
 }
 
 .card {
-    background-color:lightgrey;
+    
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 400px;
+    height: 30%;
     padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -26,6 +33,7 @@ div {
     color: #333;
     padding: 15px;
     border-radius: 10px 10px 0px 0px;
+    align-content: center;
 
 }
 
@@ -41,44 +49,19 @@ div {
 }
 
 #country {
-    font-size: 15px;
-    background-color: darkgrey;
+    font-size: 0.4em;
+    background-color: whitesmoke;
     padding: 3px;
     border-radius: 5px;
-    vertical-align: center;
+    text-align: center;
+    
+
 }
 
 .temp {
     
-    font-size: 5em;
+    font-size: 3em;
     font-weight: bold;
     margin:0px;
 }
 
-.low {
-    font-size: 5em;
-    font-weight: bold;
-    margin:0px;
-    color: rgb(94, 161, 202);
-}
-
-.mid {
-    font-size: 5em;
-    font-weight: bold;
-    margin:0px;
-    color: rgb(108, 158, 108);
-}
-
-.warm {
-    font-size: 5em;
-    font-weight: bold;
-    margin:0px;
-    color: rgb(218, 172, 87);
-}
-
-.hot {
-    font-size: 5em;
-    font-weight: bold;
-    margin:0px;
-    color: rgb(219, 90, 90);
-}
