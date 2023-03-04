@@ -29,42 +29,10 @@ A ternery `if / else` statement determines what color the degrees will display d
 const tempColour = temp < 4 ? "low" : temp < 15 ? "mid" : temp > 30 ? "hot" : temp > 20 ? "warm" : "temp";
 ```
 
-This is then outputted to a `<p>` element using a JSX expression: 
+This is then outputted to the body element to change the color of the background based on the temperature using JSX expressions: 
 
- `<p className={tempColour}>{temp}&deg;c</p>` 
+ ``document.body.className = `${weather} ${tempColour}`;``
  
- CSS then determines the colours:
- 
- ```
-.low {
-    font-size: 5em;
-    font-weight: bold;
-    margin:0px;
-    color: rgb(94, 161, 202);
-}
-
-.mid {
-    font-size: 5em;
-    font-weight: bold;
-    margin:0px;
-    color: rgb(108, 158, 108);
-}
-
-.warm {
-    font-size: 5em;
-    font-weight: bold;
-    margin:0px;
-    color: rgb(218, 172, 87);
-}
-
-.hot {
-    font-size: 5em;
-    font-weight: bold;
-    margin:0px;
-    color: rgb(219, 90, 90);
-}
-```
-
 
 ## How to use it
 Clone the repository to your local machine.
