@@ -31,7 +31,7 @@ const tempColour = temp < 4 ? "low" : temp < 15 ? "mid" : temp > 30 ? "hot" : te
 
 This is then outputted to the body element to change the color of the background based on the temperature using JSX expressions: 
 
- `document.body.className = `${weather} ${tempColour}`;` 
+ ``document.body.className = `${weather} ${tempColour}`;``
  
 
 ## How to use it
